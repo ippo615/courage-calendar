@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='libs/fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='libs/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href="libs/jquery-modal/jquery.modal.css" rel="stylesheet" type="text/css" media="screen" />
+<link href='libs/animate/animate.css' rel='stylesheet' />
+<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+<link href='chat.css' rel='stylesheet' />
+<script src='libs/fullcalendar/lib/moment.min.js'></script>
+<script src='libs/fullcalendar/lib/jquery.min.js'></script>
+<script src='libs/fullcalendar/fullcalendar.min.js'></script>
+<script src="libs/jquery-modal/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="libs/livestamp/livestamp.min.js" type="text/javascript" charset="utf-8"></script>
+<script src='knowledge/adjectives.js'></script>
+<script src='knowledge/adverbs.js'></script>
+<script src='knowledge/verbs.js'></script>
+<script src='knowledge/classes.js'></script>
+<script src='knowledge/common_nouns.js'></script>
+<script src='knowledge/countries.js'></script>
+<script src='knowledge/fruits.js'></script>
+<script src='knowledge/musical_instruments.js'></script>
+<script src='knowledge/names_female.js'></script>
+<script src='knowledge/names_male.js'></script>
+<script src='knowledge/vegetables.js'></script>
+<script src='chat.js'></script>
+<script src='events.js'></script>
+<script src='main.js'></script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	/* Let the calendar events span multiple lines */
+	.fc-day-grid-event .fc-content {
+		white-space: normal;
+	}
+
+	/* Fix for month/week/day buttons being visible behind modal */
+	.blocker {
+		z-index: 10;
+	}
+
+	#modal-chat {
+		max-width: 960px;
+		max-height: 480px;
+		width: 320px;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id="calendar"></div>
+
+	<!-- Legal Dialog -->
+	<div id="modal-legal" style="display:none;">
+		<h1>Legal Info</h1>
+		<p>Some random legal advice we found on the internet said it's not a good idea to have a publicly visible, publicly editable calendar.</p>
+		<p>So we don't.</p>
+		<p>Instead you get the best collection of fake events which you can talk about but not add to. Find an event that speaks to you and click on it or just click on a new date to start a new event that we'll immediately forget.</p>
+	</div>
+
+	<!-- Chat Dialog -->
+	<div id="modal-chat" style="display:none;">
+		<div id="chat-messages" class="chat-conversation">
+
+			<div class="chat-message-group chat-user-primary">
+				<div class="chat-sender-info">
+					<div class="chat-user-name"><i class="fa fa-fw fa-user"></i>You</div>
+					<div class="chat-message-time"><i class="fa fa-fw fa-clock-o"></i><span data-livestamp="1472333033"></span></div>
+				</div>
+				<div class="chat-message">I think this is not going to look good.</div>
+			</div>
+
+			<div class="chat-message-group chat-user-other">
+				<div class="chat-sender-info">
+					<div class="chat-user-name"><i class="fa fa-fw fa-desktop"></i>Robot</div>
+					<div class="chat-message-time"><i class="fa fa-fw fa-clock-o"></i><span data-livestamp="1472333033"></span></div>
+				</div>
+				<div class="chat-message">Dont judge until you try.</div>
+			</div>
+
+		</div>
+		<div class="chat-input-wrapper">
+			<input class="chat-input" placeholder="Say something..."></input>
+			<button class="chat-input-submit" id="btn-chat-say-it">Say it</button>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.chat, body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/*
+.chat-conversation {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	right: 1em;
+	bottom: 2em;
+	border: 1px solid #000;
+	overflow-y: scroll;
+}
+*/
+.chat-input-wrapper {
+	padding: 1em;
+	border: 1px solid #000;
+	border-top: none;
+}
+.chat-input-submit {
+	width: 25%;
+	float: right;
+}
+.chat-input {
+	border: none;
+	width: 70%;
+}
+
+.chat-conversation {
+	border: 1px solid #000;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.chat-message-group {
+	padding: 0.5em;
+}
+
+.chat-sender-info {
+	font-size: 0.8em;
+	font-weight: 200;
+	opacity: 0.5;
+	padding: 0.2em 0;
+}
+
+.chat-user-primary {
+	text-align: right;
+}
+.chat-user-other {
+	text-align: left;
+}
+
+.chat-user-name, .chat-message-time {
+	display: inline;
+}
